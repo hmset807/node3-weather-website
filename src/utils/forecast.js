@@ -14,7 +14,8 @@ request({url, json: true}, (er, {body}={}) =>{
         callback(undefined,{
             temp: body.current.temperature,
             feelslike: body.current.feelslike,
-            description: body.current.weather_descriptions[0]
+            description: body.current.weather_descriptions[0],
+            country: body.location.country
         })
     }
   
@@ -22,3 +23,5 @@ request({url, json: true}, (er, {body}={}) =>{
 } 
 
 module.exports = forecast;
+
+

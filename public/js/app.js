@@ -17,7 +17,7 @@ weatherform.addEventListener("submit", (e) =>{
         if(data.error){
             return messageOne.textContent=data.error;
         }
-        messageOne.textContent=data.location;
+        messageOne.textContent=`${data.location} and the timezone is ${data.country}`;
         messageTwo.textContent=data.forecast.description;
     })
 })
